@@ -87,12 +87,7 @@ $esi = "";
 	if((!empty($_POST['emp_id'])) || (!empty($_POST['firstname']) && !empty($_POST['lastname']))){
 		$da = $bsal * 0.03;
 		$hra = $bsal * 0.5;
-		if($temp){
-			$ca = 1600;
-		}
-		else {
-			$ca = 0;
-		}
+		$ca = 1600;
 		$pd = $bsal * 0.12;
 		$ot = $temp * 500;
 
@@ -119,7 +114,7 @@ $esi = "";
 
 	if(isset($_POST['generate'])){
 
-		if(!empty($_POST['emp_id']) && ($temp)){
+		if(!empty($_POST['emp_id'])){
 
 			$pdf = new FPDF();
 			$pdf->AddPage();
